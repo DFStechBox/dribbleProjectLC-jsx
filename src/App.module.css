@@ -1,0 +1,33 @@
+.prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  top: -170px;
+  align-items: center;
+  margin: 20px;
+}
+
+.bg {
+  background-color: #496ca1;
+  height: 500px;
+  padding: 50px;
+  color: white;
+  text-align: center;
+}
+
+.heading,
+.description {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+

@@ -1,0 +1,109 @@
+.card {
+  max-width: 500px;
+  background-color: white;
+  --padding-y: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px color-mix(in srgb, black, transparent 80%);
+}
+
+.card--startup {
+  --price-theme: #5a5679;
+  --price-theme-darker: #241f46;
+}
+
+.card--pro {
+  --price-theme: #f2746dff;
+  --price-theme-darker: #d43533;
+  --padding-y: 60px;
+}
+
+.card--enterprise {
+  --price-theme: #47b8e0;
+  --price-theme-darker: #1378d5;
+}
+
+.card__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--padding-y) 10px;
+}
+
+.card__label {
+  /* color: black; */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card__image {
+  max-width: 40px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.card__price-label {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--price-theme);
+  font-family: Poppins;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f3f1f1;
+  width: 100%;
+}
+
+.card__price-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--price-theme);
+}
+
+.card__price-duration {
+  font-size: 0.8rem;
+  color: var(--price-theme);
+  margin-left: 4px;
+}
+
+.card__benefits-label {
+  color: var(--price-theme);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+}
+
+.card__benefits {
+  color: black;
+  padding-left: 10px;
+  font-size: 0.7rem;
+  margin-bottom: 15px;
+}
+
+.card__benefit-icon {
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--price-theme), white 20%);
+}
+
+/* .center-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.card__button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: var(--price-theme);
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid var(--price-theme-darker);
+  margin-top: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  /* margin-bottom: 20px; */
+}
