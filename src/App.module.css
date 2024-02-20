@@ -1,28 +1,17 @@
-.prices {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  position: relative;
-  top: -170px;
-  align-items: center;
-  margin: 20px;
-}
-
 .bg {
   background-color: #496ca1;
-  height: 500px;
   padding: 50px;
-  color: white;
+  height: 500px;
   text-align: center;
 }
 
-.heading,
-.description {
-  max-width: 500px;
+.heading, .description {
+  max-width: 550px;
   margin: 0 auto;
 }
 
 .heading {
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
@@ -30,4 +19,23 @@
   font-size: 1.2rem;
 }
 
+.update-buttons {
+  position: relative;
+  top: -300px;
+}
 
+.update-button {
+  display: block;
+  border: none;
+  padding: 20px 30px;
+  background-color: lightgreen;
+  margin-bottom: 20px;
+  width: 230px;
+  margin: 20px auto;
+}
+
+.nothing {
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+}

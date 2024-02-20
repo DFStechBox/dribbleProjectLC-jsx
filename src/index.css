@@ -8,14 +8,31 @@ body {
   font-family: Poppins;
 }
 
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  margin: 10px 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
 .center {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.center-horizontal {
-  display: flex;
   align-items: center;
 }
 
@@ -25,16 +42,16 @@ body {
   align-items: center;
 }
 
-button {
-  cursor: pointer;
+.center-horizontal {
+  display: flex;
+  align-items: center;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+.bg-green {
+  background-color: green;
 }
 
-container {
+.container {
   max-width: 1000px;
   padding: 20px;
   margin: 0 auto;

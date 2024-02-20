@@ -1,64 +1,70 @@
-import PricingCard from "./assets/components/PricingCard/PricingCard";
+import PricingCards from "./assets/components/PricingCards/PricingCards";
 import styles from "./App.module.css";
 import { useState } from "react";
 
 function App() {
-  // const showPricingCards = true;
-  const [state, setState] = useState({showPricingCards: true});
+  const [showPricingCards, setShowPricingCards] = useState(true);
+  const [showHeading, setShowHeading] = useState(true);
 
-  const updateState = () => {
-    setState({ showPricingCards: !state.showPricingCards });
+  // const updateShowPricingCards = () => {
+  //   setShowPricingCards(!showPricingCards) // batch/queue the update
+  //   console.log(showPricingCards)
+  // }
+
+  // const updateShowHeading = () => {
+  //   setShowHeading(!showHeading) // batch/queue the update
+  // }
+
+  const updateStates = () => {
+    setShowPricingCards(!showPricingCards); // queue for next render
+    setShowHeading(!showHeading); // queue for next render
   };
 
   const cards = [
     {
-      label: "Start Up",
+      label: "Start-Up",
       price: "Free",
-      imageAlt: "Moving Bicycle with clouds",
       image: "/images/bike.png",
+      imageAlt: "Moving bicycle with clouds",
       benefits: ["Unlimited Downloads", "Email Support", "Limited Access"],
     },
-
     {
       label: "Pro",
-      price: "$49",
+      price: "49$",
       duration: "/Year",
-      imageAlt: "car with clouds",
       image: "/images/car.png",
+      imageAlt: "Moving car with clouds",
       benefits: [
-        "Up to 10 users",
+        "Upto 10 Users",
         "Email Support, Call Support",
         "1 Year Access",
       ],
     },
-
     {
       label: "Enterprise",
-      price: "$99",
-      imageAlt: "Flying plane with clouds",
+      price: "99$",
       image: "/images/plane.png",
+      imageAlt: "Flying plane with clouds",
       benefits: ["Unlimited Access", "On demand request", "Lifetime Access"],
     },
   ];
 
   return (
-    <div>
+    <main>
       <div className={styles.bg}>
-        <h1 className={styles.heading}>CHOOSE YOUR PLAN</h1>
+        {showHeading && <h1 className={styles.heading}>Choose your plan</h1>}
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-          molestiae a odit labore ipsa tempore sit laboriosam corrupti.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus
+          leo quam, nec feugiat metus tincidunt id.
         </p>
       </div>
-      <button onClick={updateState}>Update State</button>
-      {state.showPricingCards && (
-        <div className={`${styles.prices} container`}>
-          {cards.map((card) => {
-            return <PricingCard key={card.label} card={card} />;
-          })}
-        </div>
-      )}
-    </div>
+      <div className={styles["update-buttons"]}>
+        <button onClick={updateStates} className={styles["update-button"]}>
+          Update States
+        </button>
+      </div>
+      {showPricingCards && <PricingCards cards={cards} />}
+    </main>
   );
 }
 
