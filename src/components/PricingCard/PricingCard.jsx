@@ -1,6 +1,7 @@
 import styles from "./PricingCard.module.css";
 import Button from "../Button/Button";
 import PropTypes from "prop-types";
+import {randomizeArr} from "../../helpers/array";
 
 function PricingCard({ card }) {
   const themeClasses = {

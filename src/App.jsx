@@ -1,6 +1,7 @@
-import PricingCards from "./assets/components/PricingCards/PricingCards";
+import PricingCards from "./components/PricingCards/PricingCards";
 import styles from "./App.module.css";
 import { useState } from "react";
+import UseEffectExamples from './components/UseEffectExamples/UseEffectExamples'
 
 function App() {
   const [showPricingCards, setShowPricingCards] = useState(true);
@@ -51,7 +52,7 @@ function App() {
 
   return (
     <main>
-      <div className={styles.bg}>
+      {/* <div className={styles.bg}>
         {showHeading && <h1 className={styles.heading}>Choose your plan</h1>}
         <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus
@@ -63,7 +64,8 @@ function App() {
           Update States
         </button>
       </div>
-      {showPricingCards && <PricingCards cards={cards} />}
+      {showPricingCards && <PricingCards cards={cards} />} */}
+    <UseEffectExamples />
     </main>
   );
 }
